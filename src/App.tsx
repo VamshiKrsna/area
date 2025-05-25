@@ -1,12 +1,14 @@
 import './App.css'
 import Navbar from './components/navbar'
+import Hero from './components/hero'
 
 function App() {
   return (
     <div className="p-8 space-y-6">
       <Navbar />
+      <Hero />
       {/* Schibsted Grotesk Example */}
-      <div className="font-['Schibsted_Grotesk'] text-2xl">
+      <div className="font-['Schibsted_Grotesk'] text-2xl mt-20">
         This is Schibsted Grotesk Font
       </div>
 
