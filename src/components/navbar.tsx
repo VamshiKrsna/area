@@ -16,10 +16,17 @@ const Navbar = () => {
     <div className='flex flex-col'>
       {/* Logo and Button (scroll away) */}
       <div className='flex justify-between items-center h-20'>
-        {/* Logo Section */}
-        <div className='ml-6 h-10 w-20'>
+        {/* Logo and Hamburger Row */}
+        <div className='flex items-center ml-6 h-10'>
           <h1 className='font-friends text-3xl font-[Schibsted_Grotesk] font-bold'>Area</h1>
+          {/* Hamburger Icon - Mobile */}
+          <div className='md:hidden flex items-center ml-70'>
+            <button onClick={handleDrawerToggle} aria-label='Open menu'>
+              <MenuIcon className='text-black !text-3xl cursor-pointer' />
+            </button>
+          </div>
         </div>
+        {/* Desktop Button */}
         <div className='hidden md:flex mt-2 ml-3 h-14 w-36 mr-6'>
           <button className='bg-[#495c1b] h-12 w-36 cursor-pointer flex items-center justify-center gap-1 rounded-full hover:bg-[#5a6f22] transition-all duration-300 group'>
             <span className='text-white font-[Friends_UltraBold_Regular]'>Learn More</span>
@@ -37,16 +44,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Hamburger Icon - Mobile */}
-      <div className='md:hidden flex items-center mr-6 '>
-        <button onClick={handleDrawerToggle} aria-label='Open menu'>
-          <MenuIcon className='text-black !text-3xl cursor-pointer' />
-        </button>
-      </div>
-
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className='fixed inset-0 bg-white z-50 flex flex-col p-6 transition-all duration-300 border-black border-6'>
+        <div className='fixed inset-0 bg-white z-50 flex flex-col p-6 transition-all duration-300'>
           <div className='flex justify-between items-center mb-8'>
             <h1 className='font-friends text-3xl font-[Schibsted_Grotesk] font-bold'>Area</h1>
             <button onClick={handleDrawerToggle} aria-label='Close menu'>
