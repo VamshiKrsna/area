@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
